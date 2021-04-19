@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.css">
+    <title>Welcome to MyUniv</title>
+</head>
+<body class="bg-blue-900">
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="w-full text-gray-300 bg-blue-900 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+  <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+    <div class="p-8 flex flex-row items-center justify-between">
+      <a href="index.html" class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">MYUNIV</a>
+      <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+      <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-300 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">Home</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-300 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="about.html">About University</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-300 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="facilities.html">Facilities</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-300 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="ContactUs.html">Contact Us</a>
+    </nav>
+  </div>
+</div>
+<div class="md:container md:mx-auto">
+    <img src="assets/home.jpeg" class="rounded-3xl w-96 mr-11 float-right hover:shadow-2xl">
+    <div class="ml-24 mt-5">
+        <span class="text-5xl text-green-400">Learn </span><span class="text-5xl text-white">More </span>
+        <br>
+        <span class="text-5xl text-white">About </span><span class="text-5xl text-yellow-200">MYUNIV</span>
+        <br>
+        <div class="mt-10 mr-10 text-gray-400 font-semibold">
+            <p>Learn about MyUniv for a great and fun university. <br>
+               MyUniv has very complete facilities available, many activities are<br>
+               held to make students comfortable at MyUniv.<br>
+               MyUniv can make your future better with learning that puts practice over theory.<br>
+               Lets choose MyUniv for the better university.</p>
+        </div>
+        <div class="box-border h-20 w-52 p-4 mt-10 rounded-3xl bg-white hover:shadow-2xl">
+            <div class="space-x-4">
+                <a href="https://gmail.com">
+                    <img src="assets/email.png" class="h-11 inline-block">
+                </a>
+                <a href="https://facebook.com">
+                    <img src="assets/fb.png" class="h-12 inline-block">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="assets/ig.png" class="h-8 inline-block">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
